@@ -42,22 +42,22 @@
 
 		npu_pkt: npu-pkt@8a000000 {
 			no-map;
-			reg = <0x0 0x8a000000 0x0 0x2c00000>;
+			reg = <0x0 0x8a000000 0x0 0x1000000>;
 		};
 
-		npu_txpkt: npu-txpkt@8cc00000 {
+		npu_txpkt: npu-txpkt@8b000000 {
 			no-map;
-			reg = <0x0 0x8cc00000 0x0 0x4000000>;
+			reg = <0x0 0x8b000000 0x0 0x1000000>;
 		};
 
-		npu_txbufid: npu-txbufid@90c00000 {
+		npu_txbufid: npu-txbufid@8c000000 {
 			no-map;
-			reg = <0x0 0x90c00000 0x0 0x6800>;
+			reg = <0x0 0x8c000000 0x0 0x6800>;
 		};
 
-		npu_ba: npu-ba@90c06800 {
+		npu_ba: npu-ba@8c06800 {
 			no-map;
-			reg = <0x0 0x90c06800 0x0 0x200000>;
+			reg = <0x0 0x8c06800 0x0 0x200000>;
 		};
 	};
 
@@ -156,6 +156,8 @@
 	};
 
 	cpufreq: cpufreq {
+		reg = <0x0 0x1fa20000 0x0 0x2c0>, <0x0 0x1efbe000 0x0 0x800>;
+		reg-names = "chip-scu", "mcucfg";
 		compatible = "airoha,en7581-cpufreq";
 
 		operating-points-v2 = <&cpu_smcc_opp_table>;
