@@ -42,22 +42,22 @@
 
 		npu_pkt: npu-pkt@8a000000 {
 			no-map;
-			reg = <0x0 0x8a000000 0x0 0x1000000>;
+			reg = <0x0 0x8a000000 0x0 0x2000000>;
 		};
 
-		npu_txpkt: npu-txpkt@8b000000 {
+		npu_txpkt: npu-txpkt@8c000000 {
 			no-map;
-			reg = <0x0 0x8b000000 0x0 0x1000000>;
+			reg = <0x0 0x8c000000 0x0 0x2000000>;
 		};
 
-		npu_txbufid: npu-txbufid@8c000000 {
+		npu_txbufid: npu-txbufid@8e000000 {
 			no-map;
-			reg = <0x0 0x8c000000 0x0 0x6800>;
+			reg = <0x0 0x8e000000 0x0 0x6800>;
 		};
 
-		npu_ba: npu-ba@8c06800 {
+		npu_ba: npu-ba@8e006800 {
 			no-map;
-			reg = <0x0 0x8c06800 0x0 0x200000>;
+			reg = <0x0 0x8e006800 0x0 0x200000>;
 		};
 	};
 
